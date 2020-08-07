@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from home.models import Create
+from home.forms import forms
 # Create your views here. 
 def create(request):
     if request.method == "POST":
@@ -27,7 +28,7 @@ def delete(request, id):
 
 def update(request, id):  
     obje = Create.objects.get(id=id)  
-    form = CreateForm(request.POST, object = obje)  
+    form = forms(request.POST, instance = obje)  
     if form.is_valid():  
         form.save()  
         return redirect("/")  

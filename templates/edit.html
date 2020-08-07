@@ -5,17 +5,17 @@
 </head>
 <body>
 <h1> Edit Users </h1>
-<form method="post" name="Edit User" action ="/update/{{ obje.id }}">
+<form method="post" name="Edit User" action ="/update/{{ object.id }}">
 {% csrf_token %}
 <hr>
   <div class="form-group col-md-6">
     <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" name="name" required="" value = "{{ obje.name }}" >
+    <input type="text" class="form-control" id="name" name="name" required="" value = "{{ object.name }}" >
   </div>
   <hr>
   <div class="form-group col-md-6">
     <label for="email">Email address</label>
-    <input type="email" class="form-control" id="email" name="email" required="" value = "{{ obje.email }}" >
+    <input type="email" class="form-control" id="email" name="email" required="" value = "{{ object.email }}" >
     
     
   </div>
